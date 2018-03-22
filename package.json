@@ -1,0 +1,20 @@
+{
+  "name": "tal-jsx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && babel src -d dist && npm run uglify",
+    "uglify": "uglifyjs --compress --mangle --output dist/index.js -- dist/index.js"
+  },
+  "keywords": [],
+  "author": "Lion Ralfs <lion.ralfs@hotmail.com> (https://github.com/lionralfs)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "uglify-js": "^3.3.16"
+  }
+}
