@@ -1,7 +1,7 @@
 {
   "name": "tal-jsx",
   "version": "1.0.0",
-  "description": "A small library which lets you use JSX Syntax in TAL (https://github.com/bbc/tal)",
+  "description": "A utility library which lets you use JSX Syntax in TAL (https://github.com/bbc/tal)",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist/ && babel src -d dist && npm run uglify",
