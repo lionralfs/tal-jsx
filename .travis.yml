@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+dist: trusty
+install:
+  - npm -v
+  - npm install
+script:
+  - npm run build
+  - npm t 
