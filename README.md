@@ -1,5 +1,7 @@
 # tal-jsx
 
+[![Build Status](https://travis-ci.org/lionralfs/tal-jsx.svg?branch=master)](https://travis-ci.org/lionralfs/tal-jsx)
+
 ## Installation
 
 ```
