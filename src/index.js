@@ -73,3 +73,8 @@ export const taljsx = (el, attributes, ...args) => {
 
   return { el, attributes, children };
 };
+
+if (typeof window !== 'undefined') {
+  window.render = render;
+  window.taljsx = taljsx;
+}

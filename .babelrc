@@ -1,15 +1,4 @@
 {
-  "plugins": [
-    "transform-react-jsx",
-    [
-      "transform-es2015-modules-umd",
-      {
-        "globals": {
-          "render": "render",
-          "taljsx": "taljsx"
-        }
-      }
-    ]
-  ],
+  "plugins": ["transform-react-jsx", "transform-es2015-modules-umd"],
   "presets": ["env"]
 }
