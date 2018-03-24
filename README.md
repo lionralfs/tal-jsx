@@ -6,8 +6,13 @@
 npm install tal-jsx --save
 ```
 
-TODO: add unpkg example here...
-... library exposes itself on window ...
+or include the following script in your page:
+
+```html
+<script src="https://unpkg.com/tal-jsx/dist/global.min.js"></script>
+```
+
+in which case the library exposes itself on `window` (`window.render` and `window.taljsx`).
 
 In your `.babelrc`:
 
