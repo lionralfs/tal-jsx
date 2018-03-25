@@ -57,6 +57,7 @@ tree becomes very difficult to read.
 #### An example
 
 Take a look at this:
+
 ```js
 const wrapper = new Container();
 wrapper.addClass('wrapper');
@@ -80,6 +81,7 @@ wrapper.appendChildWidget(button);
 ```
 
 This could now be written as:
+
 ```js
 const wrapper = render(
   <Container class="wrapper">
@@ -95,6 +97,11 @@ const wrapper = render(
 ```
 
 Much nicer, right?
+
+## Limitations
+
+* You need Babel (or write the transformed JSX by hand).
+* This was mainly built for static content. There is no such thing as state updates or a diffing algorithm.
 
 ## License
 
