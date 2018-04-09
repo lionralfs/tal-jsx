@@ -1,6 +1,6 @@
 {
   "name": "tal-jsx",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A utility library which lets you use JSX Syntax in TAL (https://github.com/bbc/tal)",
   "main": "dist/index.js",
   "scripts": {
