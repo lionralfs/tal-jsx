@@ -25,12 +25,19 @@ export class Label extends Widget {
   constructor(id, text, enableHTML) {
     super(id);
     this.id = id;
-    this.enableHTML = !!enableHTML;
+    this._enableHTML = !!enableHTML;
 
     this.text = text;
   }
 
   setText(text) {
-    this.text = text;
+    // see browserdevice.js#setElementContent why this is being done
+    if (this._enableHTML) {
+      const temp = document.createElement('div');
+      temp.innerHTML = text;
+      this.text = temp.innerHTML;
+    } else {
+      this.text = text;
+    }
   }
 }
