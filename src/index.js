@@ -3,7 +3,10 @@ export const render = ({ el, attributes, children }) => {
 
   // it is a horizontalprogress widget
   if (attributes && attributes.showLabel) {
-    instance = new el(null, true);
+    instance = new el(attributes.id, true);
+  } else if (attributes && attributes.enableHTML) {
+    // it is a label, text content will be set later
+    instance = new el(attributes.id, '', true);
   } else {
     instance = new el();
   }

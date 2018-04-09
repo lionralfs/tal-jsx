@@ -16,7 +16,7 @@ it('It adds classes to a container', () => {
   expect(container.classes).toContain('test2');
 });
 
-it('It appends childwidgets to a container', () => {
+it('It appends childWidgets to a container', () => {
   const container = render(
     <Container>
       <Label />

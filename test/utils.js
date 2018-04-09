@@ -22,10 +22,12 @@ export class Container extends Widget {
 export class Button extends Container {}
 
 export class Label extends Widget {
-  constructor() {
-    super();
+  constructor(id, text, enableHTML) {
+    super(id);
+    this.id = id;
+    this.enableHTML = !!enableHTML;
 
-    this.text = null;
+    this.text = text;
   }
 
   setText(text) {
