@@ -13,8 +13,15 @@
     "jsx",
     "tv-applications"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lionralfs/tal-jsx.git"
+  },
   "author": "Lion Ralfs <lion.ralfs@hotmail.com> (https://github.com/lionralfs)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lionralfs/tal-jsx/issues"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
