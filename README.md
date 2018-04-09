@@ -12,7 +12,7 @@ npm install tal-jsx --save
 or include the following script in your page:
 
 ```html
-<script src="https://unpkg.com/tal-jsx@0.3.0/dist/global.min.js"></script>
+<script src="https://unpkg.com/tal-jsx@0.4.1/dist/global.min.js"></script>
 ```
 
 in which case the library exposes itself on `window` (`window.render` and `window.taljsx`).
@@ -102,6 +102,24 @@ Much nicer, right?
 
 * You need Babel (or write the transformed JSX by hand).
 * This was mainly built for static content. There is no such thing as state updates or a diffing algorithm.
+
+## DOM JSX
+
+You can also use real DOM JSX inside a `<Label>` without having to specify anything. For example:
+
+```js
+let label = render(
+  <Label>
+    <a href="#">
+      <div />
+    </a>
+    <p>TEST</p>
+    <div>
+      <strong>ok</strong>
+    </div>
+  </Label>
+);
+```
 
 ## License
 
