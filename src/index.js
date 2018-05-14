@@ -54,6 +54,9 @@ export const render = ({ el, attributes, children }) => {
   if (children) {
     let setTextLater = '';
     children.forEach(child => {
+      if (child === null) {
+        return;
+      }
       // we can't call `new` on el
       if (typeof child.el !== 'function') {
         // the instance is a Label
