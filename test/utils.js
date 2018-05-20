@@ -41,3 +41,18 @@ export class Label extends Widget {
     }
   }
 }
+
+export class Carousel extends Container {
+  static get orientations() {
+    return {
+      VERTICAL: { orientation: 'vertical' },
+      HORIZONTAL: { orientation: 'horizontal' }
+    };
+  }
+
+  constructor(id, orientation) {
+    super(id);
+
+    this._orientation = orientation || Carousel.orientations.VERTICAL;
+  }
+}
