@@ -55,4 +55,19 @@ export class Carousel extends Container {
 
     this._orientation = orientation || Carousel.orientations.VERTICAL;
   }
+
+  /**
+   * length can be an array or a number
+   */
+  setWidgetLengths(length) {
+    this.lengths = length;
+  }
+}
+
+export class KeyHandler {
+  attach(carousel) {
+    this._carousel = carousel;
+  }
+
+  setAnimationOptions() {}
 }
