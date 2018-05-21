@@ -112,14 +112,16 @@ To render [Carousels](https://bbc.github.io/tal/widgets/carousel.html), you can 
 ```js
 const handler = new ActivateFirstHandler(); // or any other KeyHandler
 
-<Carousel orientation="horizontal" handler={handler}>
-  <Button>
-    <Label>Item 1</Label>
-  </Button>
-  <Button>
-    <Label>Item 2</Label>
-  </Button>
-</Carousel>;
+const myCarousel = render(
+  <Carousel orientation="horizontal" handler={handler}>
+    <Button>
+      <Label>Item 1</Label>
+    </Button>
+    <Button>
+      <Label>Item 2</Label>
+    </Button>
+  </Carousel>
+);
 ```
 
 The `orientation` can be either `horizontal` or `vertical`.
