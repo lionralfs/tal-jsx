@@ -1,6 +1,6 @@
 /** @jsx taljsx */
 
-const { Container, Label } = require('./utils');
+const { Container, Label, Button } = require('./utils');
 const { taljsx, render } = require('../src');
 
 it('It sets enableHTML correctly', () => {
@@ -90,4 +90,8 @@ it('Automatically sets enableHTML when jsx content is detected', () => {
 
   expect(label._enableHTML).toBe(true);
   expect(label.text).toBe('<p></p><div>test</div><p></p><span></span>');
+});
+
+it('Throws an error when trying to render text to anything else than a Label', () => {
+  expect(() => render(<Button>text</Button>)).toThrowError(TypeError);
 });
