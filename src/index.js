@@ -39,24 +39,11 @@ export const render = ({ el, attributes, children }) => {
       classesToAdd = attributes.class.split(' ');
     }
 
-    if (attributes.onClick && typeof attributes.onClick === 'function') {
-      instance.addEventListener('select', attributes.onClick);
-    }
-
-    if (attributes.onKeyPress && typeof attributes.onKeyPress === 'function') {
-      instance.addEventListener('keypress', attributes.onKeyPress);
-    }
-
     if (
-      attributes.src &&
       typeof attributes.src === 'string' &&
       typeof instance.setSrc === 'function'
     ) {
       instance.setSrc(attributes.src);
-    }
-
-    if (attributes.ref && typeof attributes.ref === 'function') {
-      attributes.ref(instance);
     }
 
     if (
@@ -65,12 +52,22 @@ export const render = ({ el, attributes, children }) => {
     ) {
       instance.setBackgroundImage(attributes.background);
     }
+
+    for (const attribute in attributes) {
+      if (typeof events[attribute] === 'string') {
+        instance.addEventListener(events[attribute], attributes[attribute]);
+      }
+    }
+
+    if (typeof attributes.ref === 'function') {
+      attributes.ref(instance);
+    }
   }
 
   if (children) {
     let setTextLater = '';
     children.forEach(child => {
-      if (child === null) {
+      if (child === null || (typeof child === 'boolean' && !child)) {
         return;
       }
       // we can't call `new` on el
@@ -136,6 +133,24 @@ const renderHTML = vnode => {
   (vnode.children || []).forEach(c => n.appendChild(renderHTML(c)));
 
   return n;
+};
+
+const events = {
+  onClick: 'select',
+  onKeyDown: 'keydown',
+  onKeyPress: 'keypress',
+  onKeyUp: 'keyup',
+  onSelectedItemChange: 'selecteditemchange',
+  onFocus: 'focus',
+  onFocusDelay: 'focusdelay',
+  onBlur: 'blur',
+  onBeforeDataBind: 'beforedatabind',
+  onDataBound: 'databound',
+  onDataBindingError: 'databindingerror',
+  onBeforeAlign: 'beforealign',
+  onAfterAlign: 'afteralign',
+  onBeforeSelectedItemChange: 'beforeselecteditemchange',
+  onSelectedItemChange: 'selecteditemchange'
 };
 
 const isCarousel = constructor => {

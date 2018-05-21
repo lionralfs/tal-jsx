@@ -1,16 +1,26 @@
 export class Widget {
-  constructor() {
+  constructor(id) {
+    this.id = id || 'random-id';
     this.classes = [];
+    this.listeners = {};
   }
 
   addClass(className) {
     this.classes.push(className);
   }
+
+  addEventListener(event, fn) {
+    if (!this.listeners[event]) {
+      this.listeners[event] = [];
+    }
+
+    this.listeners[event].push(fn);
+  }
 }
 
 export class Container extends Widget {
-  constructor() {
-    super();
+  constructor(id) {
+    super(id);
     this.childWidgets = [];
   }
 
@@ -70,4 +80,15 @@ export class KeyHandler {
   }
 
   setAnimationOptions() {}
+}
+
+export class Image extends Container {
+  constructor(id) {
+    super(id);
+    this.source = undefined;
+  }
+
+  setSrc(source) {
+    this.source = source;
+  }
 }

@@ -21,3 +21,9 @@ it('Allows conditional rendering', () => {
 
   expect(container.childWidgets.length).toBe(0);
 });
+
+it('Allows the `something && something.something` way of conditionally rendering', () => {
+  const container = render(<Container>{false && <Label>hi</Label>}</Container>);
+
+  expect(container.childWidgets.length).toBe(0);
+});
