@@ -132,6 +132,26 @@ It also accepts the widget lengths as attributes:
 <Carousel lengths={300}>...</Carousel>
 ```
 
+## Events
+
+To bind event listeners to widgets, you can use one (or more) of the following attributes:
+
+* onClick
+* onKeyDown
+* onKeyPress
+* onKeyUp
+* onSelectedItemChange
+* onFocus
+* onFocusDelay
+* onBlur
+* onBeforeDataBind
+* onDataBound
+* onDataBindingError
+* onBeforeAlign
+* onAfterAlign
+* onBeforeSelectedItemChange
+* onSelectedItemChange
+
 ## DOM JSX
 
 You can also use real DOM JSX inside a `<Label>` without having to specify anything. For example:
