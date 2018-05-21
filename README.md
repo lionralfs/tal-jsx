@@ -1,5 +1,7 @@
 # tal-jsx
 
+> _Making TAL more declarative_
+
 [![Build Status](https://travis-ci.org/lionralfs/tal-jsx.svg?branch=master)](https://travis-ci.org/lionralfs/tal-jsx)
 [![npm version](https://badge.fury.io/js/tal-jsx.svg)](https://www.npmjs.com/package/tal-jsx)
 
@@ -102,6 +104,33 @@ Much nicer, right?
 
 * You need Babel (or write the transformed JSX by hand).
 * This was mainly built for static content. There is no such thing as state updates or a diffing algorithm.
+
+## Carousels
+
+To render [Carousels](https://bbc.github.io/tal/widgets/carousel.html), you can use `<Carousel>` like this:
+
+```js
+const handler = new ActivateFirstHandler(); // or any other KeyHandler
+
+const myCarousel = render(
+  <Carousel orientation="horizontal" handler={handler}>
+    <Button>
+      <Label>Item 1</Label>
+    </Button>
+    <Button>
+      <Label>Item 2</Label>
+    </Button>
+  </Carousel>
+);
+```
+
+The `orientation` can be either `horizontal` or `vertical`.
+
+It also accepts the widget lengths as attributes:
+
+```js
+<Carousel lengths={300}>...</Carousel>
+```
 
 ## DOM JSX
 

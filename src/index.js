@@ -7,8 +7,24 @@ export const render = ({ el, attributes, children }) => {
   } else if (attributes && attributes.enableHTML) {
     // it is a label, text content will be set later
     instance = new el(attributes.id, '', true);
+  } else if (isCarousel(el) && attributes) {
+    let orientation = false;
+    if (
+      attributes.orientation === 'horizontal' ||
+      attributes.orientation === 'vertical'
+    ) {
+      orientation = el.orientations[attributes.orientation.toUpperCase()];
+    }
+    instance = new el(attributes.id, orientation);
+    if (isKeyHandler(attributes.handler)) {
+      attributes.handler.attach(instance);
+    }
+
+    if (attributes.lengths) {
+      instance.setWidgetLengths(attributes.lengths);
+    }
   } else if (typeof el === 'function') {
-    instance = new el();
+    instance = new el(attributes && attributes.id);
   } else {
     const html = renderHTML({ el, attributes, children });
     const tmp = document.createElement('div');
@@ -120,6 +136,23 @@ const renderHTML = vnode => {
   (vnode.children || []).forEach(c => n.appendChild(renderHTML(c)));
 
   return n;
+};
+
+const isCarousel = constructor => {
+  if (!constructor) return false;
+  if (!constructor.orientations) return false;
+  if (typeof constructor.orientations['HORIZONTAL'] !== 'object') return false;
+  if (typeof constructor.orientations['VERTICAL'] !== 'object') return false;
+
+  return true;
+};
+
+const isKeyHandler = instance => {
+  if (!instance) return false;
+  if (typeof instance.attach !== 'function') return false;
+  if (typeof instance.setAnimationOptions !== 'function') return false;
+
+  return true;
 };
 
 if (typeof window !== 'undefined') {
