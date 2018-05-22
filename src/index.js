@@ -24,7 +24,9 @@ export const render = ({ el, attributes, children }) => {
       instance.setWidgetLengths(attributes.lengths);
     }
   } else if (typeof el === 'function') {
-    instance = new el(attributes && attributes.id);
+    const widget = Object.create(el.prototype);
+    widget.props = attributes;
+    instance = el.call(widget, attributes && attributes.id) || widget;
   } else {
     const html = renderHTML({ el, attributes, children });
     const tmp = document.createElement('div');
