@@ -102,7 +102,7 @@ Much nicer, right?
 
 ## Limitations
 
-* You need Babel (or write the transformed JSX by hand).
+* You need Babel (alternatively, you could write the transformed JSX by hand).
 * This was mainly built for static content. There is no such thing as state updates or a diffing algorithm.
 
 ## Carousels
@@ -154,7 +154,7 @@ To bind event listeners to widgets, you can use one (or more) of the following a
 
 ## DOM JSX
 
-You can also use real DOM JSX inside a `<Label>` without having to specify anything. For example:
+You can also use DOM JSX inside a `<Label>`. For example:
 
 ```js
 let label = render(
@@ -169,6 +169,10 @@ let label = render(
   </Label>
 );
 ```
+
+Be careful with mixing TAL JSX and DOM JSX though, as you **won't** be able to:
+* Go back to using TAL components/widgets inside DOM elements
+* Use DOM JSX outside of a `<Label>` element.
 
 ## License
 
