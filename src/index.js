@@ -108,7 +108,7 @@ export const render = ({ el, attributes, children }) => {
   return instance;
 };
 
-export const taljsx = (el, attributes, ...args) => {
+export const h = (el, attributes, ...args) => {
   let children = args.length ? [].concat(...args) : null;
 
   return { el, attributes, children };
@@ -169,8 +169,3 @@ const isKeyHandler = instance => {
 
   return true;
 };
-
-if (typeof window !== 'undefined') {
-  window.render = render;
-  window.taljsx = taljsx;
-}
