@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
 import { Image } from './utils';
-import { render } from '../src';
+import { h, render } from '../src';
 
 it('Sets the image source on an image', () => {
   const image = render(<Image src="some-image-path.png" />);
