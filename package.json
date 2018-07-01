@@ -7,7 +7,6 @@
   "module": "dist/taljsx.m.js",
   "scripts": {
     "build": "rm -rf dist/ && microbundle src/index.js --name taljsx",
-    "uglify": "uglifyjs --compress --mangle --output dist/global.min.js -- dist/index.js",
     "test": "jest"
   },
   "keywords": [
