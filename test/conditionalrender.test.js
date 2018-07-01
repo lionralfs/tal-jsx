@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
 import { Container, Label } from './utils';
-import { render } from '../src';
+import { h, render } from '../src';
 
 it("Doesn't render null", () => {
   const container = render(
