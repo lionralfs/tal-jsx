@@ -2,9 +2,11 @@
   "name": "tal-jsx",
   "version": "0.6.0",
   "description": "A utility library which lets you use JSX Syntax in TAL (https://github.com/bbc/tal)",
-  "main": "dist/index.js",
+  "main": "dist/taljsx.js",
+  "umd:main": "dist/taljsx.umd.js",
+  "module": "dist/taljsx.m.js",
   "scripts": {
-    "build": "rm -rf dist/ && babel src -d dist && npm run uglify",
+    "build": "rm -rf dist/ && microbundle src/index.js --name taljsx",
     "uglify": "uglifyjs --compress --mangle --output dist/global.min.js -- dist/index.js",
     "test": "jest"
   },
@@ -29,6 +31,7 @@
     "@babel/preset-env": "^7.4.5",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "jest": "^24.8.0",
-    "uglify-js": "^3.6.0"
+    "uglify-js": "^3.6.0",
+    "microbundle": "^0.4.4"
   }
 }
