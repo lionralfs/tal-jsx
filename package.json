@@ -4,10 +4,10 @@
   "description": "A utility library which lets you use JSX Syntax in TAL (https://github.com/bbc/tal)",
   "main": "dist/taljsx.js",
   "umd:main": "dist/taljsx.umd.js",
-  "module": "dist/taljsx.m.js",
+  "module": "dist/taljsx.mjs",
   "scripts": {
     "build": "rm -rf dist/ && microbundle src/index.js --name taljsx",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "keywords": [
     "tal",
