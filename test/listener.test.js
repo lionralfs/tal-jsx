@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
 import { Button } from './utils';
-import { render } from '../src';
+import { h, render } from '../src';
 
 it('Adds onClick event listeners', () => {
   const handler = () => {};

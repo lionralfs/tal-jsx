@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
 const { Container, Label } = require('./utils');
-const { taljsx, render } = require('../src');
+const { h, render } = require('../src');
 
 it('It renders a container', () => {
   const container = render(<Container />);

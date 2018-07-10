@@ -14,10 +14,10 @@ npm install tal-jsx --save
 or include the following script in your page:
 
 ```html
-<script src="https://unpkg.com/tal-jsx@0.6.0/dist/global.min.js"></script>
+<script src="https://unpkg.com/tal-jsx@0.6.0/dist/taljsx.umd.js"></script>
 ```
 
-in which case the library exposes itself on `window` (`window.render` and `window.taljsx`).
+in which case the library exposes itself on `window` (`window.taljsx.render` and `window.taljsx.h`).
 
 In your `.babelrc`:
 
@@ -27,7 +27,7 @@ In your `.babelrc`:
     [
       "transform-react-jsx",
       {
-        "pragma": "taljsx"
+        "pragma": "h"
       }
     ]
   ]
@@ -35,6 +35,8 @@ In your `.babelrc`:
 ```
 
 ## Usage
+
+First, make sure `h` and `render` are available (`import { h, render } from 'tal-jsx'`).
 
 ```js
 // create a widget by rendering some jsx:
