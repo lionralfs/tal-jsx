@@ -17,17 +17,18 @@
     "type": "git",
     "url": "git+https://github.com/lionralfs/tal-jsx.git"
   },
-  "author": "Lion Ralfs <lion.ralfs@hotmail.com> (https://github.com/lionralfs)",
+  "author": "Lion Ralfs <lion.ralfs@gmail.com> (https://github.com/lionralfs)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lionralfs/tal-jsx/issues"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3",
-    "uglify-js": "^3.3.16"
+    "jest": "^24.8.0",
+    "uglify-js": "^3.6.0"
   }
 }
