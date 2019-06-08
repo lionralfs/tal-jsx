@@ -3,7 +3,7 @@
 > _Making TAL more declarative_
 
 [![Build Status](https://travis-ci.org/lionralfs/tal-jsx.svg?branch=master)](https://travis-ci.org/lionralfs/tal-jsx)
-[![npm version](https://badge.fury.io/js/tal-jsx.svg)](https://www.npmjs.com/package/tal-jsx)
+[![npm version](https://badge.fury.io/js/tal-jsx.svg)](https://www.npmjs.com/package/tal-jsx) [![Greenkeeper badge](https://badges.greenkeeper.io/lionralfs/tal-jsx.svg)](https://greenkeeper.io/)
 
 ## Installation
 
