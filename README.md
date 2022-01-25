@@ -15,7 +15,7 @@ npm install tal-jsx --save
 or include the following script in your page:
 
 ```html
-<script src="https://unpkg.com/tal-jsx@0.6.0/dist/global.min.js"></script>
+<script src="https://unpkg.com/tal-jsx@latest/dist/global.min.js"></script>
 ```
 
 in which case the library exposes itself on `window` (`window.render` and `window.taljsx`).
