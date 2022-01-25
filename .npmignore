@@ -1,2 +1,4 @@
 test/
 .babelrc
+.github/
+jest.config.js
