@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
 import { Carousel, Button, KeyHandler, Label } from './utils';
-import { render } from '../src';
+import { h, render } from '../src';
 
 describe('Carousel items', () => {
   it('Appends items the carousel', () => {

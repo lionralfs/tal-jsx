@@ -1,7 +1,7 @@
-/** @jsx taljsx */
+/** @jsx h */
 
-const { Container, Label, Button } = require('./utils');
-const { taljsx, render } = require('../src');
+import { Label, Button } from './utils';
+import { h, render } from '../src';
 
 it('It sets enableHTML correctly', () => {
   let label = render(<Label enableHTML />);
