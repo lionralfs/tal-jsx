@@ -2,7 +2,7 @@
 
 > _Making TAL more declarative_
 
-[![Build Status](https://travis-ci.org/lionralfs/tal-jsx.svg?branch=master)](https://travis-ci.org/lionralfs/tal-jsx)
+![example workflow](https://github.com/lionralfs/tal-jsx/actions/workflows/main.yml/badge.svg)
 [![npm version](https://badge.fury.io/js/tal-jsx.svg)](https://www.npmjs.com/package/tal-jsx)
 
 
