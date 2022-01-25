@@ -18,7 +18,7 @@ or include the following script in your page:
 <script src="https://unpkg.com/tal-jsx@latest/dist/taljsx.umd.js"></script>
 ```
 
-in which case the library exposes itself on `window` (`window.taljsx.render` and `window.taljsx.h`).
+in which case the library is exposed on `window` (`window.taljsx.render` and `window.taljsx.h`).
 
 In your `.babelrc`:
 

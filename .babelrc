@@ -1,4 +1,4 @@
 {
-  "plugins": ["@babel/transform-react-jsx", "transform-es2015-modules-umd"],
+  "plugins": ["@babel/transform-react-jsx"],
   "presets": ["@babel/preset-env"]
 }

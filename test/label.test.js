@@ -1,7 +1,7 @@
 /** @jsx h */
 
-const { Label, Button } = require('./utils');
-const { h, render } = require('../src');
+import { Label, Button } from './utils';
+import { h, render } from '../src';
 
 it('It sets enableHTML correctly', () => {
   let label = render(<Label enableHTML />);
