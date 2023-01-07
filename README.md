@@ -1,5 +1,7 @@
 # tal-jsx
 
+> Update (2023-01-07): TAL is being deprecated, so I archived this repository and deprecated the npm package.
+
 > _Making TAL more declarative_
 
 ![build status](https://github.com/lionralfs/tal-jsx/actions/workflows/main.yml/badge.svg)
